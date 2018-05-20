@@ -1,0 +1,184 @@
+object fdm: Tfdm
+  OldCreateOrder = False
+  Left = 374
+  Top = 118
+  Height = 591
+  Width = 453
+  object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=db.mdb;Persist Secu' +
+      'rity Info=False'
+    LoginPrompt = False
+    Mode = cmShareDenyNone
+    Provider = 'Microsoft.Jet.OLEDB.4.0'
+    Left = 16
+    Top = 8
+  end
+  object Tsotrudnik: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = #1057#1086#1090#1088#1091#1076#1085#1080#1082#1080
+    Left = 216
+  end
+  object Tklient: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = #1050#1083#1080#1077#1085#1090#1099
+    Left = 160
+  end
+  object Tvidacha: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = #1042#1099#1076#1072#1095#1072
+    Left = 96
+  end
+  object Ttip_vidachi: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = #1058#1080#1087'_'#1074#1099#1076#1072#1095#1080
+    Left = 88
+    Top = 48
+  end
+  object Tdolznost: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = #1044#1086#1083#1078#1085#1086#1089#1090#1100
+    Left = 88
+    Top = 96
+  end
+  object Tasortiment: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = #1040#1089#1089#1086#1088#1090#1080#1084#1077#1085#1090
+    Left = 88
+    Top = 144
+  end
+  object Tvidacha_na_ekzem: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = #1042#1099#1076#1072#1095#1072#1053#1072#1069#1082#1079#1077#1084#1087#1083
+    Left = 88
+    Top = 192
+  end
+  object Ttip_filma: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = #1058#1080#1087'_'#1092#1080#1083#1100#1084#1072
+    Left = 88
+    Top = 232
+  end
+  object Tgrup: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = #1043#1088#1091#1087#1087#1099
+    Left = 88
+    Top = 280
+  end
+  object Tsoret_na_grup: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = #1057#1086#1090#1088#1053#1072#1043#1088#1091#1087#1087
+    Left = 88
+    Top = 328
+  end
+  object Tekzempler: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = #1069#1082#1079#1077#1084#1087#1083#1103#1088
+    Left = 88
+    Top = 376
+  end
+  object Thranil: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = #1061#1088#1072#1085#1080#1083#1080#1097#1077
+    Left = 88
+    Top = 424
+  end
+  object Tistoriya: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = #1048#1089#1090#1086#1088#1080#1103
+    Left = 88
+    Top = 480
+  end
+  object Dvidacha: TDataSource
+    DataSet = Tvidacha
+    Left = 232
+    Top = 72
+  end
+  object Dsotrudnik: TDataSource
+    DataSet = Tsotrudnik
+    Left = 376
+    Top = 72
+  end
+  object Dklient: TDataSource
+    DataSet = Tklient
+    Left = 304
+    Top = 72
+  end
+  object Dtip_vidachi: TDataSource
+    DataSet = Ttip_vidachi
+    Left = 168
+    Top = 56
+  end
+  object Ddolznost: TDataSource
+    DataSet = Tdolznost
+    Left = 176
+    Top = 96
+  end
+  object Dasortiment: TDataSource
+    DataSet = Tasortiment
+    Left = 176
+    Top = 144
+  end
+  object Dvidacha_na_ekzem: TDataSource
+    DataSet = Tvidacha_na_ekzem
+    Left = 176
+    Top = 184
+  end
+  object Dtip_filma: TDataSource
+    DataSet = Ttip_filma
+    Left = 176
+    Top = 240
+  end
+  object Dgrup: TDataSource
+    DataSet = Tgrup
+    Left = 176
+    Top = 280
+  end
+  object Dsoret_na_grup: TDataSource
+    DataSet = Tsoret_na_grup
+    Left = 176
+    Top = 336
+  end
+  object Dekzempler: TDataSource
+    DataSet = Tekzempler
+    Left = 176
+    Top = 384
+  end
+  object Dhranil: TDataSource
+    DataSet = Thranil
+    Left = 176
+    Top = 432
+  end
+  object Distoriya: TDataSource
+    DataSet = Tistoriya
+    Left = 184
+    Top = 488
+  end
+end

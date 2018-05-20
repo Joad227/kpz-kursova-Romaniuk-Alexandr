@@ -1,0 +1,24 @@
+unit histori;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs;
+
+type
+  Thistory = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  history: Thistory;
+
+implementation
+
+{$R *.dfm}
+
+end.

@@ -1,0 +1,80 @@
+unit dm;
+
+interface
+
+uses
+  SysUtils, Classes, DB, ADODB;
+
+type
+  Tfdm = class(TDataModule)
+    ADOConnection1: TADOConnection;
+    Tsotrudnik: TADOTable;
+    Tklient: TADOTable;
+    Tvidacha: TADOTable;
+    Ttip_vidachi: TADOTable;
+    Tdolznost: TADOTable;
+    Tasortiment: TADOTable;
+    Tvidacha_na_ekzem: TADOTable;
+    Ttip_filma: TADOTable;
+    Tgrup: TADOTable;
+    Tsoret_na_grup: TADOTable;
+    Tekzempler: TADOTable;
+    Thranil: TADOTable;
+    Tistoriya: TADOTable;
+    Dvidacha: TDataSource;
+    Dsotrudnik: TDataSource;
+    Dklient: TDataSource;
+    Dtip_vidachi: TDataSource;
+    Ddolznost: TDataSource;
+    Dasortiment: TDataSource;
+    Dvidacha_na_ekzem: TDataSource;
+    Dtip_filma: TDataSource;
+    Dgrup: TDataSource;
+    Dsoret_na_grup: TDataSource;
+    Dekzempler: TDataSource;
+    Dhranil: TDataSource;
+    Distoriya: TDataSource;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    procedure MyLocate (s: String);
+    procedure MyLocatet (q: String);
+    procedure MyLocatee (w: String);
+    procedure MyLocatef (f: String);
+
+
+
+  end;
+
+var
+  fdm: Tfdm;
+
+implementation
+
+{$R *.dfm}
+
+{ Tfdm }
+
+procedure Tfdm.MyLocate(s: String);
+begin
+    Tklient.Locate('Прізвище', s,[loPartialKey]);
+end;
+
+
+procedure Tfdm.MyLocatee(w: String);
+begin
+   Tsotrudnik.Locate('Посада', w,[loPartialKey])
+end;
+
+procedure Tfdm.MyLocatef(f: String);
+begin
+  Tasortiment.Locate('Наименование',f,[loPartialKey])
+end;
+
+procedure Tfdm.MyLocatet(q: String);
+begin
+ Tsotrudnik.Locate('Прізвище', q,[loPartialKey])
+end;
+
+end.
